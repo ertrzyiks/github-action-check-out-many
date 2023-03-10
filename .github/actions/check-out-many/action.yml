@@ -19,5 +19,5 @@ runs:
         echo "${{ inputs.repos }}" | checkout.sh
       env:
         TOKEN: ${{ inputs.token }}
-        TARGET_FOLDER: ${{ inputs.folder }}
+        TARGET_FOLDER: ${{ inputs.path }}
       shell: bash
