@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./actions/.github/actions/check-out-many
+      - uses: ./.github/actions/check-out-many
         with:
           who-to-greet: 'Mona the Octocat'
 
