@@ -1,12 +1,11 @@
 name: 'Check out many'
-description: 'Greet someone'
+description: 'Check out all the repos'
 inputs:
-  who-to-greet:
-    description: 'Who to greet'
+  repos:
+    description: 'A list of repositories to check out separated by a new line'
     required: true
-    default: 'World'
 runs:
   using: "composite"
   steps:
-    - run: echo Hello ${{ inputs.who-to-greet }}.
+    - run: echo Hello ${{ inputs.repos }}.
       shell: bash
