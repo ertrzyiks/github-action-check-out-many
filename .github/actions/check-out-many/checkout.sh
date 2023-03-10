@@ -1,5 +1,5 @@
 while read -r repo;
 do
-   echo "Checking out $repo";
-   git clone git@github.com:$repo.git --depth 1
+   echo "Checking out ertrzyiks/$repo";
+   git clone https://github.com:ertrzyiks/$repo.git --depth 1 ${TARGET_FOLDER}/$repo
 done

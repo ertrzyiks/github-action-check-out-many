@@ -4,6 +4,12 @@ inputs:
   repos:
     description: 'A list of repositories to check out separated by a new line'
     required: true
+  token:
+    description: 'Github access token used to checkout the repo'
+    required: true
+  path:
+    description: 'Github access token used to checkout the repo'
+    default: .
 runs:
   using: "composite"
   steps:
@@ -11,5 +17,7 @@ runs:
       shell: bash
     - run: |
         echo "${{ inputs.repos }}" | checkout.sh
-        ls -l
+      env:
+        TOKEN: ${{ inputs.token }}
+        TARGET_FOLDER: ${{ inputs.folder }}
       shell: bash

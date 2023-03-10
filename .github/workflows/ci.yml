@@ -10,7 +10,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/check-out-many
         with:
+          path: ./repos
+          token: ${{ secrets.PAT }}
           repos: |
-            ertrzyiks/amxx-canvas
-            ertrzyiks/react-native-component-test
+            amxx-canvas
+            react-native-component-test
+      - run: find .repos -mindepth 1 -maxdepth 2 -type d
 
