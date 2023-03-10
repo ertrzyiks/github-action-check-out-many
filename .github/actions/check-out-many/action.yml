@@ -11,4 +11,5 @@ runs:
       shell: bash
     - run: |
         echo "${{ inputs.repos }}" | checkout.sh
+        ls -l
       shell: bash
