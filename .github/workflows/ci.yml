@@ -13,7 +13,7 @@ jobs:
           path: ./.repos
           token: ${{ secrets.PAT }}
           repos: |
-            amxx-canvas
+            amxx-canvas2
             react-native-component-test
       - run: find .repos -mindepth 1 -maxdepth 2 -type d
 
