@@ -7,6 +7,6 @@ do
     repo=`echo $repo | sed 's/ *$//g'`
 
     echo "Checking out ertrzyiks/$repo";
-    git clone https://github.com/ertrzyiks/$repo.git --depth 1 ${TARGET_FOLDER}/$repo || die "Unable to check out $repo repo"
+    git clone https://$TOKEN@github.com/ertrzyiks/$repo.git --depth 1 ${TARGET_FOLDER}/$repo || die "Unable to check out $repo repo"
   fi;
 done
